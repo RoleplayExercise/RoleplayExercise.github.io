@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Roleplay Exercise</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin-top: 55px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  background-color: #666;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  width: 33%;
+  float: left;
+}
+img {
+  width: 33%;
+}
+button {
+  margin:0 auto;
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div id="main">
+<section>
+<header><h3>Role 1</h3></header><header><h3>Scenario</h3></header><header><h3>Role 2</h3></header>
+</section>
+<img id="1"><img id = "3"><img id = "2">
+<button onclick="redraw()">Redraw</button>
+<script>
+
+function redraw(){
+	var choice1 = Math.floor(Math.random() * 31) + 1;
+	var choice2 = Math.floor(Math.random() * 31) + 1;
+	while(choice1 == choice2){
+		choice2 = Math.floor(Math.random() * 31) + 1;
+	}
+	var choice3 = Math.floor(Math.random() * 16) + 1;
+	document.getElementById(1).src = "Roles/Role" + choice1 + ".png";
+	document.getElementById(2).src = "Roles/Role" + choice2 + ".png";
+	document.getElementById(3).src = "Scenarios/Scenario" + choice3 + ".png";
+
+}
+redraw();
+</script>
+</body>
+</html>
